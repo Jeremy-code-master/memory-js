@@ -1,41 +1,35 @@
 'use strict';
 
 let cardsArray = [{
-  'name': 'shell',
-  'img': 'img/blueshell.png'
+  'name': 'Chien1',
+  'img': 'img/chien1.png'
 }, {
-  'name': 'star',
-  'img': 'img/star.png'
+  'name': 'Chien2',
+  'img': 'img/chien2.png'
 }, {
-  'name': 'bobomb',
-  'img': 'img/bobomb.png'
+  'name': 'Chien3',
+  'img': 'img/chien3.png'
 }, {
-  'name': 'mario',
-  'img': 'img/mario.png'
+  'name': 'Chien4',
+  'img': 'img/chien4.png'
 }, {
-  'name': 'luigi',
-  'img': 'img/luigi.png'
+  'name': 'Chien5',
+  'img': 'img/chien5.png'
 }, {
-  'name': 'peach',
-  'img': 'img/peach.png'
+  'name': 'Chien6',
+  'img': 'img/chien6.png'
 }, {
-  'name': '1up',
-  'img': 'img/1up.png'
+  'name': 'Chien7',
+  'img': 'img/chien7.png'
 }, {
-  'name': 'mushroom',
-  'img': 'img/mushroom.png'
+  'name': 'Chien8',
+  'img': 'img/chien8.png'
 }, {
-  'name': 'thwomp',
-  'img': 'img/thwomp.png'
+  'name': 'Chien9',
+  'img': 'img/chien9.png'
 }, {
-  'name': 'bulletbill',
-  'img': 'img/bulletbill.png'
-}, {
-  'name': 'coin',
-  'img': 'img/coin.png'
-}, {
-  'name': 'goomba',
-  'img': 'img/goomba.png'
+  'name': 'Chien10',
+  'img': 'img/chien10.png'
 }];
 
 let gameGrid = cardsArray.concat(cardsArray).sort(function () {
@@ -56,7 +50,6 @@ game.appendChild(grid);
 gameGrid.forEach(function (item) {
   let name = item.name,
       img = item.img;
-
 
   let card = document.createElement('div');
   card.classList.add('card');

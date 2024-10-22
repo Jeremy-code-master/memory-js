@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(30, 30, 40);
+    color: whitesmoke;
+}
+
+header {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.links {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-left: 10vh;
+    font-size: 1.6rem;
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 10px;
+}
+
+.card,
+.back,
+.front {
+    height: 180px;
+    width: 180px;
+}
+
+.back,
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: rgb(200, 190, 170)  url('../img/question.png') center center / contain ;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-size: contain;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match .front {
+    background: rgb(30, 30, 40);
+}
