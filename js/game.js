@@ -40,7 +40,7 @@ let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
-let delay = 500;
+let delay = (700);
 
 let game = document.getElementById('game');
 let grid = document.createElement('section');
@@ -109,6 +109,29 @@ grid.addEventListener('click', function (event) {
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
         setTimeout(match, delay);
+        firstGuess = '';
+        secondGuess = '';
+        count = 0;
+        previousTarget = null;
+
+        let selected = document.querySelectorAll('.selected');
+        selected.forEach(function (card) {
+          card.classList.remove('selected');
+          card.classList.add('found');
+        });
+
+        const replay = document.createElement('p');
+        replay.classList.add('replay_message');
+        replay.textContent = 'Appuyez sur Espace pour rejouer';
+        document.body.appendChild(replay);
+
+        document.addEventListener('keydown', function(event) {
+        // Vérifier si la touche pressée est la barre d'espace
+        if (event.code === 'Space') {
+          location.reload(); // Rafraîchir la page
+        }
+        });
+        return;
       }
       setTimeout(resetGuesses, delay);
     }
