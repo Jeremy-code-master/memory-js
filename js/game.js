@@ -39,6 +39,7 @@ let gameGrid = cardsArray.concat(cardsArray).sort(function () {
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
+let imageCount = 0;
 let previousTarget = null;
 let delay = (700);
 
@@ -86,6 +87,21 @@ let resetGuesses = function resetGuesses() {
   });
 };
 
+let reset_game = function reset_game() {
+  const replay = document.createElement('p');
+  replay.classList.add('replay_message');
+  replay.textContent = 'Appuyez sur Espace pour rejouer';
+  document.body.appendChild(replay);
+  imageCount = 0;
+
+  document.addEventListener('keydown', function(event) {
+    // Vérifier si la touche pressée est la barre d'espace
+    if (event.code === 'Space') {
+      location.reload(); // Rafraîchir la page
+    }
+  });
+};
+
 grid.addEventListener('click', function (event) {
 
   let clicked = event.target;
@@ -113,24 +129,16 @@ grid.addEventListener('click', function (event) {
         secondGuess = '';
         count = 0;
         previousTarget = null;
+        imageCount += 1;
 
         let selected = document.querySelectorAll('.selected');
         selected.forEach(function (card) {
           card.classList.remove('selected');
           card.classList.add('found');
         });
-
-        const replay = document.createElement('p');
-        replay.classList.add('replay_message');
-        replay.textContent = 'Appuyez sur Espace pour rejouer';
-        document.body.appendChild(replay);
-
-        document.addEventListener('keydown', function(event) {
-        // Vérifier si la touche pressée est la barre d'espace
-        if (event.code === 'Space') {
-          location.reload(); // Rafraîchir la page
+        if (imageCount === 10) {
+          reset_game();
         }
-        });
         return;
       }
       setTimeout(resetGuesses, delay);

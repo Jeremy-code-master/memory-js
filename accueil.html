@@ -11,7 +11,7 @@
     <header>
         <nav class="navBar">
             <a href="accueil.html" class="links">Accueil</a>
-            <a href="connexion.html" class="links">Connexion</a>
+            <a href="inscription.html" class="links">S'inscrire</a>
             <a href="game.html" class="links">Jouer</a>
             <a href="profil.html" class="links">Profil</a>
         </nav>
@@ -19,16 +19,21 @@
     <main>
         <section class="rules">
             <section>
-            <h1>Bienvenue sur le site de Memory de l'ENI</h1>
-            <p>
-                Venez jouer avec nous et faites le meilleur score possible.
-            </p>
-            <h2>Règles du jeu :</h2>
-            <ul>
-                <li class="liste">Retournez 2 cartes. Si les images sont identiques, vous marquez 1 point.</li>
-                <li class="liste">Si les images sont différentes, les cartes se retournent face cachées.</li>
-                <li class="liste">La partie est terminé lorsque toutes les paires de cartes auront été retrouvées !</li>
-            </ul>
+                <section class="title">
+                    <h1>Bienvenue sur le site de Memory de l'ENI</h1>
+                    <img src="img/Logo_eni.jpg" alt="logo_eni">
+                </section>
+                <section>
+                    <p>
+                        Venez jouer avec nous et faites le meilleur score possible.
+                    </p>
+                    <h2>Règles du jeu :</h2>
+                    <ul>
+                        <li class="liste">Retournez 2 cartes. Si les images sont identiques, vous marquez 1 point.</li>
+                        <li class="liste">Si les images sont différentes, les cartes se retournent face cachées.</li>
+                        <li class="liste">La partie est terminé lorsque toutes les paires de cartes auront été retrouvées !</li>
+                    </ul>
+                </section>
             </section>
             <section>
                 <img src="img/presentation_accueil.PNG" alt="">
@@ -41,6 +46,24 @@
                 </p>
             </section>
         </section>
+        <aside class="login_area">
+            <h1>Connectez-vous :</h1>
+            <form id="userForm">
+                <div class="form-style">
+                    <label for="username">Nom d'utilisateur</label>
+                    <div id="messageHolder_username"></div>
+                    <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur :">
+                </div>
+                <div class="form-style">
+                    <label for="password">Mot de passe</label>
+                    <div id="messageHolder_password"></div>
+                    <input type="password" id="password" name="password" minlength="6" placeholder="******">
+                </div>
+                <div class="form-style">
+                    <button type="submit">Connexion</button>
+                </div>
+            </form>
+        </aside>
     </main>
     <footer>
 
