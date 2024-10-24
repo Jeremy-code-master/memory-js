@@ -1,0 +1,118 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(190, 220, 255);
+    color: black;
+}
+
+header {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.links {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-left: 10vh;
+    font-size: 1.6rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+}
+
+.form-style {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-style label {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(40, 40, 40);
+}
+
+.form-style input {
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-style p {
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: rgb(255, 80, 80);
+    font-weight: bold;
+}
+
+.form-style button {
+    padding: 10px 20px;
+    background-color: rgb(200, 200, 200);
+    /* Couleur de fond */
+    width: 100%;
+    color: black;
+    /* Couleur du texte */
+    font-weight: bold;
+    /* Texte en gras */
+    border: none;
+    /* Pas de bordure */
+    border-radius: 5px;
+    /* Coins arrondis */
+    font-size: 1.2rem;
+    /* Taille du texte */
+    cursor: pointer;
+    /* Curseur en forme de main */
+}
+
+.form-style button:hover {
+    background-color: rgb(30, 30, 30);
+    /* Couleur au survol */
+    color: whitesmoke;
+}
+
+.form-style button:active {
+    transform: scale(0.9);
+    /* Effet d'appui */
+}
+
+.errorMessage {
+    font-size: 2rem;
+    padding: 30px;
+    color: red;
+}

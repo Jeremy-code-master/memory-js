@@ -14,9 +14,16 @@ const emailValidator = (email) => {
  * @returns
  */
 const passwordValidator = (password) => {
-  const passwordRegex = /^(?=.*[a-z])(?=.*[!@#$%^-_&*])(?=.{6,})/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[!@#$%^-_&*])(?=.*[1-9])(?=.{6,})/;
   return passwordRegex.test(password);
 };
+
+/**
+ * Check confirmation password
+ * @param {string} password
+ * @param {string} confirmPassword
+ * @returns
+ */
 
 /**
  * Check Name Format
@@ -24,7 +31,7 @@ const passwordValidator = (password) => {
  * @returns
  */
 const usernameValidator = (username) => {
-  const nameRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.{3,})/;
+  const nameRegex = /^(?=.*[a-z])(?=.{3,})/;
   return nameRegex.test(username);
 };
 
