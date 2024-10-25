@@ -84,18 +84,12 @@ section h1 {
 .form-style button {
     padding: 10px 20px;
     background-color: rgb(200, 200, 200);
-    /* Couleur de fond */
     width: 100%;
     color: black;
-    /* Couleur du texte */
     font-weight: bold;
-    /* Texte en gras */
     border: none;
-    /* Pas de bordure */
     border-radius: 5px;
-    /* Coins arrondis */
     font-size: 1.2rem;
-    /* Taille du texte */
     cursor: pointer;
     /* Curseur en forme de main */
 }
